@@ -4,7 +4,8 @@ import {  RealEstate, Schedule } from "../../entities";
 import { AppError } from "../../errors";
 import { iScheduleRead } from "../../interfaces/schedule.interface";
 
-const readScheduleService = async (idRealEstate: number): Promise<any> => {
+
+const readScheduleService = async (idRealEstate: number): Promise<iScheduleRead> => {
 
 	const scheduleRepo: Repository<Schedule> = AppDataSource.getRepository(Schedule);
 	const realEstateRepo: Repository<RealEstate> = AppDataSource.getRepository(RealEstate);

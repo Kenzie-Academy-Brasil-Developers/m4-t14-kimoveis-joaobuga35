@@ -26,7 +26,7 @@ const readScheduleSchema = z.object({
 	schedule: z.array(z.object({
 		id: z.number(),
 		date:z.string(),
-		hour: z.string(),
+		hour: z.string().or(z.number()),
 		user: userCompleteSchema
 	}))
 });

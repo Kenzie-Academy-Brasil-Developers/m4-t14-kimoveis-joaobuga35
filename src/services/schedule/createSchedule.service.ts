@@ -55,7 +55,7 @@ const createScheduleService = async (scheduleData: iCreateSchedule, req: Request
 	const hour = Number(scheduleData.hour.split(":")[0]);
 
 	if (hour <= 7 || hour >= 18) {
-		throw new AppError("Invalid hour, available times are 8AM to 18PM");
+		throw new AppError("Invalid hour, available times are 8AM to 18PM",400);
 	}
 
 	let scheduleUpdate = {};
